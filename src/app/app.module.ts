@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ResultComponent } from './result/result.component';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
 import { TempComponent } from './temp/temp.component';
@@ -32,7 +33,8 @@ const appRoutes : Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

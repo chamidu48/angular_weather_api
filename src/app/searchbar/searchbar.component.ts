@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ApiService } from '../services/api.service';
+import { Country } from '../interfaces/country';
 
 @Component({
   selector: 'app-searchbar',
@@ -7,16 +8,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent implements OnInit{
+  inputText:string=""
+  country:Country | any;
 
-  constructor(private router:Router){}
+  constructor(private apiService:ApiService){}
 
   ngOnInit(): void {
   }
 
-  getData(){
+  getData(input:string){
+    this.country=this.apiService.getWeather(input)
   }
 
   onSearchClick(){
-    this.router.navigateByUrl('/result')
+    if(this.inputText!=""){
+      this.getData(this.inputText)
+    }
   }
 }

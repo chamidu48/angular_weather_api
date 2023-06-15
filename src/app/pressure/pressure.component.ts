@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pressure',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./pressure.component.css']
 })
 export class PressureComponent {
+  @Input() pressure:string | undefined
 
 }

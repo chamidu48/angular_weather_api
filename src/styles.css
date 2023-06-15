@@ -23,9 +23,12 @@ body{
     padding-top: 0px;
     padding-bottom: 0px;
     height: 250px;
+    margin: 10px;
+
 }
 .center{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -43,8 +46,12 @@ h3{
     font-weight: 600;
 }
 .h3-result{
-    font-size: 70px;
+    font-size: 60px;
 }
 .space-v10{
     height: 10px;
+}
+.unit{
+    font-size: 24px;
+    font-weight: 100;
 }

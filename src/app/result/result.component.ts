@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
+import { DataSaveService } from '../services/data-save.service';
+import { Country } from '../interfaces/country';
 
 @Component({
   selector: 'app-result',
@@ -7,11 +8,19 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  constructor(private apiService:ApiService){}
+  private country:Country | any;
+  temperature:string = "";
+  pressure:string=""
+  humidity:string=""
+
+  constructor(private dataSaveService:DataSaveService){}
 
   ngOnInit(): void {
-    this.apiService.getWeather()
+    this.country=this.dataSaveService.getData()
+    this.temperature=this.country["temp"]
+    this.pressure=this.country["pressure"]
+    this.humidity=this.country["humidity"]
   }
-
+  
 
 }
