@@ -11,11 +11,12 @@ import { ErrorComponent } from './error/error.component';
 import { TempComponent } from './temp/temp.component';
 import { HumidityComponent } from './humidity/humidity.component';
 import { PressureComponent } from './pressure/pressure.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { SearchComponent } from './search/search.component'
 
 const appRoutes : Routes = [
   {path:"",redirectTo:"", pathMatch: "full"},
-  {path:"", component: SearchbarComponent},
+  {path:"", component: SearchComponent},
   {path:"result", component:ResultComponent}
 ]
 
@@ -27,7 +28,8 @@ const appRoutes : Routes = [
     ErrorComponent,
     TempComponent,
     HumidityComponent,
-    PressureComponent
+    PressureComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

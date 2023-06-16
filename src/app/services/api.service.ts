@@ -20,4 +20,6 @@ export class ApiService{
             this.router.navigateByUrl('/result')
         })
     }
+
+    
 }

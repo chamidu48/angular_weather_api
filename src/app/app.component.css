@@ -1,14 +1,4 @@
 
-.home{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-image: url("../assets/images/bg1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 

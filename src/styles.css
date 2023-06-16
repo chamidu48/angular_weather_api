@@ -51,6 +51,9 @@ h3{
 .space-v10{
     height: 10px;
 }
+.space-v50{
+    height: 50px;
+}
 .unit{
     font-size: 24px;
     font-weight: 100;

@@ -1,5 +1,25 @@
-<div class="container center">
-    <app-humidity [humidity]="humidity"></app-humidity>
-    <app-temp [temperature]="temperature"></app-temp>
-    <app-pressure [pressure]="pressure"></app-pressure>
+<div [ngStyle]="chooseClass()" class="center">
+    <div class="data">
+        <div class="details center">
+            <div class="c-name">
+                <h1>{{name}}</h1>
+                <h6>{{description}}</h6>
+            </div>
+            <div [ngStyle]="chooseIcon()" class="icon"></div>
+        </div>
+        <div class="space-v50"></div>
+        <div class="container">
+            <app-humidity [humidity]="humidity"></app-humidity>
+            <app-temp [temperature]="temperature"></app-temp>
+            <app-pressure [pressure]="pressure"></app-pressure>
+        </div>
+        <div class="space-v50"></div>
+        <div class="center">
+            <div class="search">
+                <button (click)="onBack()" type="button" class="btn-search">Search again</button>
+            </div>
+        </div>
+    </div>
+    
 </div>
+

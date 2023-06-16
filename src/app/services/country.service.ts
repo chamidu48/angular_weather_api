@@ -8,11 +8,15 @@ export class CountryService {
 
   constructor() { }
 
-  createCountry(temp:string, pressure:string, humidity:string):Country{
+  createCountry(name:string, main:string, description:string ,temp:string, pressure:string, humidity:string, icon:string):Country{
     const country:Country={
+      name:name,
+      main:main,
+      description:description,
       temp:temp,
       pressure:pressure,
-      humidity:humidity
+      humidity:humidity,
+      icon:icon
     }
     return country
   }
