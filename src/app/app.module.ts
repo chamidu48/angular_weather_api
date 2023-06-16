@@ -14,12 +14,6 @@ import { PressureComponent } from './pressure/pressure.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './search/search.component'
 
-const appRoutes : Routes = [
-  {path:"",redirectTo:"", pathMatch: "full"},
-  {path:"", component: SearchComponent},
-  {path:"result", component:ResultComponent}
-]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +28,6 @@ const appRoutes : Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
     HttpClientModule,
     FormsModule
   ],
